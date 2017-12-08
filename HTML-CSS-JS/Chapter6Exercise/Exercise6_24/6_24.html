@@ -1,0 +1,35 @@
+<!--
+6.24 Write a script that calculates the squares and cubes of the numbers from 0 to 5 and outputs
+HTML5 text that displays the resulting values in an HTML5 table format, as show below. [Note:
+This script does not require any input from the user.]
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Rynnand Arriola Exercise 6.24</title>
+		<meta name= "author" content="Rynnand Arriola">
+		
+		 <style type = "text/css">
+			td { text-align: center;}
+		</style>
+		
+		<script type = "text/javascript">
+
+		
+		document.write( "<table border='1' cellpadding= 5 cellspacing= 1 align=center width= 20% >");
+        
+		document.write( " <tr> <th>Number</th> <th>Square</th> <th>Cube</th> </tr>" );
+		 
+		 for(var n=0; n<=5; n++) 
+		{ 
+			document.write( "<tr><td>" + n + "</td><td>" + n*n + "</td><td>" + n*n*n + "</td></tr>" ) 
+		} 
+		
+		document.write( "</table>" ) 
+		 
+      </script>
+	</head>
+	<body></body>
+</html>

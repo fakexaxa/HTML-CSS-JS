@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Rynnand Arriola Exercise 3.6</title>
+		<meta name= "author" content="Rynnand Arriola">
+	</head>
+	
+	<body>
+
+		<h1>3.6 Website Registration Form with Optional Survey</h1>
+		
+		<p>(Website Registration Form with Optional Survey) Create a website registration form to obtain
+			a users first name, last name and e-mail address. In addition, include an optional survey question
+			that asks the users year in college (e.g., Freshman). Place the optional survey question in a
+			details element that the user can expand to see the question.</p>
+			
+			<hr>
+
+		 <form method = "post" autocomplete = "on">
+		 
+			<p><label>First Name:
+            <input type = "text" id = "firstName" 
+               placeholder = "First name" /> 
+            </label></p>
+			
+			<p><label>Last Name:
+            <input type = "text" id = "lastName" 
+               placeholder = "Last name" /> 
+            </label></p>
+			
+			<p><label>Email:
+            <input type = "email" id = "email" 
+               placeholder = "name@domain.com" /> 
+            </label></p>
+			
+			 <p><label for = "txtList">College Year:
+            <input type = "text" id = "txtList" placeholder = "Select a Year" list = "years" />
+            <datalist id = "years">
+               <option value = "Freshman">
+               <option value = "Sophomore">
+               <option value = "Junior">
+               <option value = "Senior">
+                
+            </datalist>
+			</label></p>
+			
+		 
+			<details>
+						<summary>Optional Question</summary>
+							
+							<p><label>What is your Major?
+								<input type = "text" id = "Major" placeholder = "Major" /> 
+							</label></p>
+						
+			</details>
+		 
+			<p><input type = "submit" value = "Submit" />
+            <input type = "reset" value = "Clear" /></p>   
+		 
+		 </form>
+		
+	</body>
+</html>

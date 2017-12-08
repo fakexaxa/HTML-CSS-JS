@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title> Rynnand Arriola Exercise 3.5</title>
+		<meta name= "author" content="Rynnand Arriola">
+	</head>
+	
+	<body>
+				
+				<h1> Exercise 3.5 </h1>
+				
+				<p>Write an HTML5 element (or elements) to accomplish each of the following tasks:
+					a) Students were asked to rate the food in the cafeteria on a scale of 1 to 10. Use a meter
+					element with text to its left and right to indicate that the average rating was 7 out of 10.
+					b) Create a details element that displays the summary text "Survey Results" for Part (a).
+					When the user clicks the arrow next to the summary text, an explanatory paragraph about
+					the survey should be displayed.
+					c) Create a text input element for a first name. The element should automatically receive
+					the focus when the form is rendered in a browser.
+					d) Modify Part (c) to eliminate the label element and use placeholder text in the input
+					element.
+					e) Use a datalist to provide an autocomplete list for five states.
+					f) Create a range input element that allows the user to select a number from 1 to 100.
+					g) Specify that autocomplete should not be allowed for a form. Show only the form’s
+					opening tag.
+					h) Use a mark element to highlight the second sentence in the following paragraph.</p>
+	
+				
+				<hr>
+				
+			<p>
+	  
+                <section id= "a" >
+                        <h4>a)How would you rate cafeteria food?</h4>
+                        1<meter min="1" max="10" value="7"></meter>10
+                </section>
+               
+                <section id= "b">
+                        <h4>b) When the user clicks the arrow next to the summary text, an explanatory paragraph about the survey should be displayed.</h4>
+                        <details>
+                                <summary>Survey Results</summary>
+                                The Students were asked to rate the food in the cafeteria and the average rating was 7 out of 10.
+                        </details>
+                </section>
+               
+                <section id="c">
+                    <h4>c) Create a text input element for a first name. The element should automatically receive the focus when the form is rendered in a browser.</h4> 
+					   <label>First name:
+                                <input type = "text" autofocus>
+                        </label>
+                </section>
+               
+			   
+                <section id="d">
+                    <h4>d) Modify Part (c) to eliminate the label element and use placeholder text in the input element.</h4>     
+					     <label>
+                                <input type = "text" placeholder = "First name">
+                        </label>      
+                </section>
+               
+			   
+                <section id ="e">
+                    <h4>e) Use a datalist to provide an autocomplete list for five states.</h4>
+                        <form method = "post" autocomplete = "on">
+                                <input type = "text" list = "statesList" placeholder= "Select States">
+                                        <datalist id = "statesList">
+                                            <option value = "Delaware">
+                                            <option value = "Maryland">
+                                            <option value = "Philadelpia">
+                                            <option value = "New York">
+                                            <option value = "New Jersey">
+                                        </datalist>
+                                </input>
+                        </form>
+                </section>
+               
+			   
+                <section id="f">
+                    <h4>f) Create a range input element that allows the user to select a number from 1 to 100.</h4>
+							<label>
+                		1<input type = "range"  min = "1" max = "100" value = "50" />100
+							</label>
+                </section>
+               
+			   
+                <section id= "g">
+                    <h4>g) Specify that autocomplete should not be allowed for a form. Show only the form’s opening tag..</h4>
+                        <p> this is how you do it ----> "autocomplete="off" put it inside the form
+                </section>
+               
+			   
+                <section id="f">
+                    <h4>h) Use a mark element to highlight the second sentence in the following paragraph. </h4>
+			   Students were asked to rate the food in the cafeteria on a scale of 1 to 10. <mark>The average result was 7.</mark>
+				</section>		
+		</p>		
+
+	</body>
+</html>

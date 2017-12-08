@@ -1,0 +1,5 @@
+/* 4.8 style sheet*/
+
+h1{color:blue}
+a{ color: blue;text-decoration: none; }
+a:hover{background-color: yellow;}

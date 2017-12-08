@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Rynnand Arriola</title>
+		<meta name= "author" content="Rynnand Arriola">
+	</head>
+	<body>
+			<h1>Exercise 3.11 (Laying Out Book Pages in HTML5: Adding a details Element)</h1>
+		
+				<p>Modify your solution to Exercise 3.9 to add the section’s graphics as figures. The images are provided in the exerciseTextAndImages
+					folder with this chapter’s examples.</p><hr>
+
+			
+				<section id="1">
+					
+					<p><h3>3.2.1 input Type color</h3> 
+					The color input type (Fig. 3.1; lines 20&ndash;21) enables the user to enter a color. 
+					Opera displays a color picker control that shows the default color (black) with a down arrow that, when clicked, shows a drop-down with 20 basic colors (Fig. 3.2). 
+					The user can select a color or click the Other... button to select from additional basic colors or create a custom color. At the time of this writing, 
+					most browsers render the color input type as a text field in which the user can enter a hexidecimal code. 
+					<p>
+					
+					<figcaption>(Fig. 3.1)</figcaption>
+						<img src = "OperaColorInput.png" alt = "Opera's Color Control">	
+						
+						<br><br>
+						<img src = "OperaColorInput2.png" alt = "Opera's Options for More Colors">
+						<figcaption>Fig. 3.2 Inputting a color in Opera with a color picker control.</figcaption>
+				</section>
+
+				<section id="2">
+				
+					
+				<h3>autofocus Attribute</h3>
+				The autofocus attribute (Fig. 3.1; line 20)&mdash;an optional attribute that can be used in only one input element on a form&mdash;automatically gives the focus to the input element, 
+				allowing the user to begin typing in that element immediat. Figure 3.3 shows autofocus on the color element&mdash;the first input element in our form&mdash;as rendered in Chrome. 
+				You do not need to include autofocus in your forms. </p>
+				
+					<img src = "autofocus.png" alt = "Auto Focus">
+					<p><figcaption>Fig. 3.3 Autofocus in the color input element using Chrome.</figcaption>
+				</section>
+
+				<section id=3">
+				
+				<h3>Validation</h3>	
+				Traditionally it's been difficult to validate user input, such as ensuring that an e-mail address, URL, date or time is entered in the proper format. The new HTML 5 input types are self 
+				validating on the client side, eliminating the need to add complicated JavaScript code to your web pages to validate user input, reducing the amount of invalid data submitted and consequently
+				reducing Internet traffic between the server and the client to correct invalid input. When a user enters data into a form then submits the form (in this example, by clicking the
+				Submit button), the browser immediately checks the self-validating elements to ensure that the data is correct. For example, if a user enters an incorrect hexadecimal color value when 
+				using a browser that renders the color elements as a text field (e.g., Chrome), a callout pointing to the element will appear, indicating that an invalid value was entered 
+				(Fig. 3.4). Figure 3.5 lists each of the new HTML5 input types and provides examples of the proper formats required for each type of data to be valid. </p>
+				
+
+				
+		
+
+				<img src = "selfvalidationChrome.png" alt = "Self Validation Chrome">
+				<details>
+					<summary>Fig. 3.5 Self-validating input types.</summary>
+					<br><br>
+					<form method = "post" action = "http://www.deitel.com">
+					
+					
+					<img src = "OperaColorInput2.png" alt = "Opera's Options for More Colors">
+					<figcaption>Fig. 3.4 Validating a color input in Chrome.</figcaption>
+					<p>
+						<label>Color:
+							<input type = "color" autofocus /> 
+							(Hexadecimal code such as #ADD8E6)
+						</label>
+					</p>
+
+					<p>
+						<label>Date:
+							<input type = "date" /> 
+							(yyyy-mm-dd)
+						</label>
+					</p>
+					<p>
+						<label>Datetime:
+							<input type = "datetime" /> 
+							(yyyy-mm-ddThh:mm+ff:gg, such as 2012-01-27T03:15)
+						</label>
+					</p>
+					<p>
+						<label>Datetime-local:
+							<input type = "datetime-local" /> 
+							(yyyy-mm-ddThh:mm, such as 2012-01-27T03:15)
+						</label>
+					</p>
+					 <p>
+						<label>Month:
+							<input type = "month" /> (yyyy-mm)
+						</label>
+					</p>
+					 <p>
+						<label>Number:
+							<input type = "number" 
+							min = "0"max = "7"step = "1"value = "4" />
+						</label> (Enter a number between 0 and 7)
+					</p>
+					 <p>
+						<label>Email:
+							<input type = "email" placeholder = "name@domain.com" required /> (name@domain.com)
+						</label>
+					 <p>
+					<label>URL:
+						<input type = "url" placeholder = "http://www.domainname.com" /> 
+										(http://www.domainname.com)
+						</label>
+					</p>	
+						<label>Time:
+							<input type = "time" /> (hh:mm)
+						</label>
+					 <p>
+						<label>Week:
+							<input type = "week" /> 
+							(yyyy-Wnn, such as 2012-W01)
+							</label>
+					</p>
+					</form>
+				</details>	
+				</section>
+
+				
+				
+
+
+	</body>
+</html>

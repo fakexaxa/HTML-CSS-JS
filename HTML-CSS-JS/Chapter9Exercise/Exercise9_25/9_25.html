@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Rynnand Arriola Exercise 9_25</title>
+<meta name= "author" content="Rynnand Arriola">
+
+<script type="text/javascript">
+
+var randomNum =  getRandom();
+
+ function guess()
+ {
+    
+    if (parseInt(document.getElementById("inputNum").value) > randomNum){
+      alert("Too high\n\nTry again.");
+    }else if (parseInt(document.getElementById("inputNum").value) < randomNum){
+      alert("Too low\n\nTry again.");
+    }else{
+      alert("Congratulations!!\n\nYou guessed the number.");
+      
+			randomNum=getRandom();
+		}  
+	document.getElementById("inputNum").value = "";
+    document.getElementById("inputNum").focus();
+  }
+  function getRandom()
+  {
+	return  Math.floor( 1 + Math.random() * 999);
+  }
+
+</script>
+ 
+
+</head>
+<body>
+
+	
+    <label>Type a number</label> <input type="number" id="inputNum" ><br><br>
+    <button onclick="guess()">Submit your number</button>
+  
+
+
+</body>
+</html>

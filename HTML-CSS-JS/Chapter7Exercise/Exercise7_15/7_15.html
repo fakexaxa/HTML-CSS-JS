@@ -1,0 +1,50 @@
+<!--
+
+7.15 The process of finding the largest value (i.e., the maximum of a group of values) is used frequently
+in computer applications. For example, a script that determines the winner of a sales contest
+would input the number of units sold by each salesperson. The salesperson who sells the most units
+wins the contest. Write a pseudocode algorithm and then a script that inputs a series of 10 singledigit
+numbers as characters, determines the largest of the numbers and outputs a message that displays
+the largest number. Your script should use three variables as follows:
+a) counter: A counter to count to 10 (i.e., to keep track of how many numbers have been
+input and to determine when all 10 numbers have been processed);
+b) number: The current digit input to the script;
+c) largest: The largest number found so far.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Rynnand Arriola Exercise 7.15</title>
+		<meta name= "author" content="Rynnand Arriola">
+		
+		<script>
+		
+		var counter=1;
+		var number;
+		var largest=0;
+		var numberValue;
+		
+		while(counter<10)
+		{
+			
+			number=window.prompt("Enter the 10 numbers, "+ "count "+ counter);
+			numberValue=parseInt(number);
+			
+			 if ( numberValue >= largest ) 
+			{
+					largest = number;
+			}
+			
+	
+			counter++;	
+		}
+		document.writeln("<h1> The largest number is "+ largest+"</h1>");
+		
+		
+		</script>
+		
+	</head>
+	<body></body>
+</html>

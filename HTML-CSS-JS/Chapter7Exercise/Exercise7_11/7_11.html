@@ -1,0 +1,65 @@
+<!--
+7.11 Drivers are concerned with the mileage obtained by their automobiles. One driver has kept
+track of several tankfuls of gasoline by recording the number ofmiles driven and the number of gallons
+used for each tankful. Develop a script that will take as input the miles driven and gallons used (both
+as integers) for each tankful. The script should calculate and output HTML5 text that displays the
+number of miles per gallon obtained for each tankful and prints the combined number of miles per
+gallon obtained for all tankfuls up to this point. Use prompt dialogs to obtain the data from the user.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Rynnand Arriola Exercise 7_11</title>
+		<meta name= "author" content="Rynnand Arriola">
+		
+		<script>
+			
+		var miles=0;
+		var milesValue=0;
+		var gallons=0;
+		var totalMiles=0;
+		var totalGallons=0;
+		var gallonsValue=0;
+		var Average=0;
+		var counter=1;
+		
+		
+		gallons= window.prompt( "Enter the gallons, -1 to Quit:", "0" );
+		gallonsValue= parseInt(gallons);
+		
+		while(gallonsValue!=-1)
+		{
+			totalGallons+=gallons;
+			
+			miles= window.prompt( "Enter the miles, -1 to Quit:", "0" );
+			milesValue= parseInt(miles);
+			
+			totalMiles+=miles;
+			
+			document.writeln("<h3> number of miles per gallons for number "+ counter +" record is " + miles/gallons + "</h3>");
+			 
+			gallons= window.prompt( "Enter the gallons, -1 to Quit:", "0" );
+			gallonsValue= parseInt(gallons);
+			
+			counter++;
+		}
+		if ( gallonsValue != 0 )
+         {
+            Average = totalMiles / totalGallons;  
+
+           
+            document.writeln( 
+               "<h1> Combined number of miles per gallon obtained is " + Average + "</h1>" );
+         } 
+		  else
+            document.writeln( "<p>no input was entered</p>" );
+		 
+		
+		
+		</script>
+		
+	</head>
+	<body></body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Rynnand Arriola Exercise 7.20</title>
+		<meta name= "author" content="Rynnand Arriola">
+		
+		<script>
+		
+		var number, temp, numberValue;
+		var firstNum, secondNum, fourthNum, fifthNum, firstNumValue, secondNumValue, fourthNumValue;
+		
+		
+		number= window.prompt("Enter 5 digit number");
+		numberValue=parseInt(number);
+		
+		
+		if(number<99999 && number>9999)
+		{
+		
+			firstNum= number/10000;
+			firstNumValue=parseInt(firstNum);
+		
+			
+			secondNum= number/1000 % 10;
+			secondNumValue=parseInt(secondNum)
+		
+			fourthNum= number/10 % 10;
+			fourthNumValue=parseInt(fourthNum);
+		
+			fifthNum= number %10;	
+			
+			if ( firstNumValue == fifthNum && secondNumValue == fourthNumValue) 
+			{
+				document.write("<h1> The number is Palindrome</h1>");
+			}
+			else
+			{
+				document.write("<h1> The number is not Palindrome</h1>");
+			}
+		}
+		else
+		{
+			document.write("<h1> ERROR! Please enter 5 digit numbers</h1>");
+		}
+		
+		
+		</script>
+		
+		
+	</head>
+	<body></body>
+</html>

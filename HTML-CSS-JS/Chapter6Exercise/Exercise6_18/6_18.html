@@ -1,0 +1,49 @@
+<!-
+6.18 Write a script that takes three integers from the user and displays the sum, average, product,
+smallest and largest of the numbers in an alert dialog.
+->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Rynnand Arriola Exercise 6.18</title>
+		<meta name= "author" content="Rynnand Arriola">
+		
+		<script>
+		
+			var xVal, yVal, zVal; 
+			var x, y, z; 
+			var sum, average, product; 
+		
+			
+
+			xVal = window.prompt( "Enter first integer:" );
+			yVal = window.prompt( "Enter second integer:" );
+			zVal = window.prompt( "Enter third integer:" );	
+			
+			var smallest = Math.min( xVal, yVal, zVal);
+			var largest = Math.max( xVal, yVal, zVal);
+			
+			x = parseInt( xVal );
+			y = parseInt( yVal );
+			z = parseInt( zVal );
+			
+			sum = x+y+z;
+			product = x * z* y;
+			average = (x+y+z)/3;
+			
+			
+			 window.alert( "The sum of the three numbers is: "+ sum 
+						+ "\nThe product of the three numbers is:  "+ product
+						+ "\nThe average of the three numbers is: "+ average
+						+"\nThe smallest of the three numbers is:  "+smallest
+						+"\nThe largerst of the three numbers is : "+largest );
+			
+			
+		
+		</script>
+		
+	</head>
+	<body></body>
+</html>
