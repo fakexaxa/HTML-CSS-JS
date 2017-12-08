@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name= "author" content="Rynnand Arriola">
+
+ <script>
+	
+	function start()
+{
+  
+  counteLetters();
+  numberWords();
+  occurenceWords();
+  
+  
+} // end function start
+
+function counteLetters()
+{
+	var exampleString = "To be, or not to be: that is the question:";
+	var chars= exampleString.split("");
+	var letters_count={};
+  
+  var result = "";
+  result+="<h3> Part a</h3>";
+  for( var i= 0; i<chars.length;i++)
+  {
+	if(letters_count[chars[i]]==undefined)
+	letters_count[chars[i]]=0;
+  
+	letters_count[chars[i]]++;
+  }
+  for(var i in letters_count)
+  {
+	result+="<p> contains "+ letters_count[i]+",     "+ i + "</p>";
+  }
+    
+   
+   
+   document.getElementById( "results" ).innerHTML = result;
+}
+
+function numberWords()
+{
+	var exampleStr="Whether 'tis nobler in the mind to suffer";
+	var chars = exampleStr.split(" ");
+	var result2= "";
+	var acount,bcount,ccount,dcount,ecount,fcount,gcount;
+	acount=bcount=ccount=dcount=ecount=fcount=gcount=0;
+	
+	result2+="<h3> Part b</h3>";
+	for(var i=0; i<chars.length;i++)
+	{
+			if(chars[i].length==1)
+			acount++;
+			if(chars[i].length==2)
+			bcount++;
+			if(chars[i].length==3)
+			ccount++;
+			if(chars[i].length==4)
+			dcount++;
+			if(chars[i].length==5)
+			ecount++;
+			if(chars[i].length==6)
+			fcount++;
+			if(chars[i].length==7)
+			gcount++;
+			
+	}
+	result2+="<table border='1' cellpadding= 5 cellspacing= 1  width= 20% >"
+	result2+="<tr> <th>Word Length</th> <th>Occurence</th> </tr>"
+	result2+="<tr> <th>1</th> <th>"+ acount+"</th> </tr>"	
+	result2+="<tr> <th>2</th> <th>"+ bcount+"</th> </tr>"	
+	result2+="<tr> <th>3</th> <th>"+ ccount+"</th> </tr>"	
+	result2+="<tr> <th>4</th> <th>"+ dcount+"</th> </tr>"	
+	result2+="<tr> <th>5</th> <th>"+ ecount+"</th> </tr>"	
+	result2+="<tr> <th>6</th> <th>"+ fcount+"</th> </tr>"	
+	result2+="<tr> <th>7</th> <th>"+ gcount+"</th> </tr>"	
+	result2+="</table>";		
+	
+	
+	
+	document.getElementById( "results2" ).innerHTML = result2;
+}
+
+function occurenceWords()
+{
+	var exampleStr="To be , or not to be : that is the question: Whether 'tis nobler in the mind to suffer";
+	var chars = exampleStr.split(" ");
+	var result3= "";
+	var count=0;
+	var word_count={};
+	
+	
+	result3+="<br><br><h3> Part c</h3>";
+	for(var i=0; i<chars.length;i++)
+	{
+		for(var x=0; x<chars.length;x++)
+		{
+			if(chars[i]==chars[x])
+			{
+				if(word_count[chars[i]]==undefined)
+					word_count[chars[i]]=0;
+				word_count[chars[i]]++;
+			}
+			
+		}
+		
+	}
+	result3+="<table border='1' cellpadding= 5 cellspacing= 1  width= 20% >"
+	result3+="<tr> <th>Word</th> <th>Occurence</th> </tr>"
+	for(var i in word_count)
+  {
+	
+	result3+="<tr> <th>"+i+"</th> <th>"+ word_count[i]+"</th> </tr>"	
+  }
+  result3+="</table>";
+	
+
+	document.getElementById( "results3" ).innerHTML = result3;
+}
+
+
+window.addEventListener( "load", start, false );
+ 
+ </script>
+ 
+
+</head>
+<body>
+ <div id = "results"></div>
+  <div id = "results2"></div>
+  <div id = "results3"></div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<!-- Fig. 9.5: RollDice.html -->
+<!-- Random dice image generation using Math.random. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Random Dice Images</title> 
+      <style type = "text/css">
+         li { display: inline; margin-right: 10px; }
+         ul { margin: 0; }
+      </style>
+      <script>
+         // variables used to interact with the img elements
+         var die1ImageBanker;
+         var die2ImageBanker;
+         var die3ImageBanker;
+		 
+		 var die1ImagePlayer;
+		 var die2ImagePlayer;
+		 var die3ImagePlayer;
+		 
+		 var player1=0;
+		 var banker1=0;
+		 var x=" ";
+		 var output;
+		  var output1;
+		 
+		 
+         
+
+         // register button listener and get the img elements
+         function start()
+         {
+            var button = document.getElementById( "rollButton" );
+            button.addEventListener( "click", rollDice, false );
+            die1ImageBanker = document.getElementById( "bankerdie1" );
+            die2ImageBanker = document.getElementById( "bankerdie2" );
+            die3ImageBanker = document.getElementById( "bankerdie3" );
+			
+			die1ImagePlayer = document.getElementById( "playerdie1" );
+			die2ImagePlayer = document.getElementById( "playerdie2" );
+			die3ImagePlayer = document.getElementById( "playerdie3" );
+            
+			
+         } // end function start
+
+         // roll the dice
+         function rollDice()
+         {
+			var bankerrand1=2;
+			var bankerrand2=Math.floor( 1 + Math.random() * 6 );
+			var bankerrand3=2;
+			
+			var playerrand1=Math.floor( 1 + Math.random() * 6 );
+			var playerrand2=Math.floor( 1 + Math.random() * 6 );
+			var playerrand3=Math.floor( 1 + Math.random() * 6 );
+           
+		   
+			die1ImageBanker.setAttribute( "src", "die" + bankerrand1 + ".png");
+			die2ImageBanker.setAttribute( "src", "die" + bankerrand2 + ".png");
+			die3ImageBanker.setAttribute( "src", "die" + bankerrand3 + ".png");
+            
+            die1ImagePlayer.setAttribute( "src", "die" + playerrand1 + ".png");
+			die2ImagePlayer.setAttribute( "src", "die" + playerrand2 + ".png");
+			die3ImagePlayer.setAttribute( "src", "die" + playerrand3 + ".png");
+			
+			function result(die1,die2,die3)
+		 {	
+			var resultvalue=0;
+			var die1;
+			var die2;
+			var die3;
+		 
+			
+			if(die1==4&&die2==5&&die3==6)
+			{	
+				resultvalue= 14;
+			}	
+			
+			else if(die1==5&&die2==6&&die3==4)
+			{	
+				resultvalue= 14;
+			}
+
+			else if(die1==6&&die2==4&&die3==5)
+			{	
+				resultvalue= 14;
+			}				
+			else if (die1==1&&die2==2&&die3==3)
+			{
+				resultvalue=0;
+			}
+			else if (die1==2&&die2==3&&die3==1)
+			{
+				resultvalue=0;
+			}
+			else if (die1==3&&die2==1&&die3==2)
+			{
+				resultvalue=0;
+			}
+				
+			else if(die1===die2)
+			{
+			resultvalue= playerrand3;
+			}
+			else if(die2===die3)
+			{
+				resultvalue=playerrand1;
+			}
+			else if(die3===die1)
+			{
+				resultvalue=playerrand2;
+			}
+			else 
+			
+				resultvalue= 100;
+			return resultvalue;
+			
+		 }
+			
+			
+			player1= result(playerrand1,playerrand2,playerrand3);
+			compare(bankerrand2,player1);
+			
+			output=player= result(playerrand1,playerrand2,playerrand3);
+			output1=bankerrand2;
+			
+			
+            
+         } // end function rollDice
+		 
+		
+		 function compare(banker,player)
+		 {	
+			if(player===100)
+			{
+				x+="<p>NO PAIRS or INVALID, PLEASE ROLL AGAIN</p>";
+			}
+		 
+			else if(player===banker){
+				x+="<p>DRAW, PLEASE ROLL AGAIN</p>";
+				}
+			else if(banker<player){
+				x+="<p> YOU WIN</p>";
+				}
+			else
+				x+="<p> YOU LOST</p>";	
+				
+				document.getElementById("result1").innerHTML=  x;
+		 }
+
+         // set src and alt attributes for a die
+         
+		 
+		
+
+         window.addEventListener( "load", start, false );
+      </script>
+   </head>
+   <body>
+     
+      <ol>
+         <li><img id = "bankerdie1" src = "blank.png" alt = "blank image"></li>
+         <li><img id = "bankerdie2" src = "blank.png" alt = "blank image"></li>
+         <li><img id = "bankerdie3" src = "blank.png" alt = "blank image"></li>
+         
+      </ol>
+	  <hr>
+	   <ol>
+         <li><img id = "playerdie1" src = "blank.png" alt = "blank image"></li>
+         <li><img id = "playerdie2" src = "blank.png" alt = "blank image"></li>
+         <li><img id = "playerdie3" src = "blank.png" alt = "blank image"></li>
+         
+      </ol>
+	  
+	  <br>
+	  
+	  <p id="result1"></p>
+
+	  
+	  <br>
+	  
+	 
+	  
+	   <form action = "#">
+         <input id = "rollButton" type = "button" value = "Roll Dice">
+      </form>
+	  
+	   
+   </body>
+</html>
+

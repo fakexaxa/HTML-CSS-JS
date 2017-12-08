@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Rynnand Arriola Exercise 11_5</title>
+<meta name= "author" content="Rynnand Arriola">
+
+ <script>
+
+function start()
+{
+   
+   var result = "";
+   
+	result+= "<h3> ROUND NUMBERS USING Math.round </h3>";
+	result += "<p> Round the number : " + 23.556789 + " to different decimal places</p>";   
+	result += "<p> Round to Integer: " + roundtoInteger(23.556789) + "</p>";
+	result += "<p> Round to Tenths: " + roundtoTenths(23.556789) + "</p>";
+	result += "<p> Round to Hundredths: " + roundtoHundredths(23.556789) + "</p>";
+	result += "<p> Round to Thousandths: " + roundtoThousandths(23.556789) + "</p>";
+  
+   
+   document.getElementById( "results" ).innerHTML = result;
+} // end function start
+
+function roundtoInteger( value )
+{
+   
+   return Math.round(value+.5);
+} 
+
+function roundtoTenths( value )
+{
+   
+    return Math.round(value*10+.5)/10;
+}
+
+function roundtoHundredths( value )
+{
+   
+   return Math.round(value*100+.5)/100;
+} 
+
+function roundtoThousandths( value )
+{
+   
+   return Math.round(value*1000+.5)/1000;
+} 
+
+
+window.addEventListener( "load", start, false );
+
+</script>
+
+</head>
+<body>
+
+<div id = "results"></div>
+
+</body>
+</html>

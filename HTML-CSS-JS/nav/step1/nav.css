@@ -1,0 +1,44 @@
+* { box-sizing: border-box; } 
+
+body { background-color: #00005D; font-family: Verdana, Arial, sans-serif; }
+
+figure { border-style:solid; border-width:2px;}
+figcaption {text-align:center; font-family:"Arial Black", Gadget, sans-serif}
+
+#wrapper { margin: 0 auto;	width: 95%;
+
+		min-width: 960px; max-width: 1600px;
+		background-color: #B3C7E6;		color: #0000ff; }
+		
+header { background-color: #869DC7;		color: #00005D;
+		font-size: 120%;		padding: 10px 10px 10px 250px;
+		background-repeat: no-repeat;		background-image: url(myPic.JPG);  background-size: 130px 120px; }
+		
+main { background-color: #ffffff;		color: #000000;
+		padding: 20px 30px; 
+		display: block;		overflow: auto; }
+		
+footer { font-size: 80%;
+		text-align: center;		padding: 10px;
+		background-color: #869DC7;		clear: both;}
+		
+h2 { color: #869DC7;		font-family: Arial, sans-serif; }
+
+p { line-height: 1.5em; }
+ol {line-height: 1.5em; }
+#floatright { float: right;		margin: 10px; }
+nav { float: left;
+		width: 250px;		font-weight: bold;	letter-spacing: 0.1em; }
+nav ul li{ list-style-type: none; margin: 0; padding: 0; float: left;  width:100%; }
+
+
+nav a { color: #FFFFFF; text-decoration: none;		padding: 10px;
+	    display: block; 		background-color: #B3C7E6;	
+		border-bottom: 1px solid #FFFFFF; }
+		
+nav a:link { color: #FFFFFF; }
+nav a:visited { color: #EAEAEA; }
+nav a:hover { color: #869DC7;
+		background-color: #EAEAEA; }
+		
+	
